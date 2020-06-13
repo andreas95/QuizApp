@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+
+<StackPane fx:id="homeWindowSP" stylesheets="@../css/modern.css" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml" fx:controller="main.java.com.andreas.quizapp.controllers.HomeWindowController">
+<children>
+    <VBox fx:id="logoBox" alignment="TOP_CENTER" spacing="15.0">
+        <padding>
+            <Insets top="30.0"/>
+        </padding>
+        <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../assets/icon.png"/>
+                </image>
+            </ImageView>
+            <Text text="In order to begin, please select a category." fill="#CCDAE7"/>
+        </children>
+    </VBox>
+    <FlowPane fx:id="categoriesPane" alignment="TOP_CENTER" maxWidth="1000.0" vgap="20" hgap="30">
+        <StackPane.margin>
+            <Insets top="220.0"/>
+        </StackPane.margin>
+        <children>
+            <Button fx:id="buttonLiterature" mnemonicParsing="false" text="Art and Literature" styleClass="cat-btn" onAction="#setLiterature" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                <graphic>
+                    <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/literature.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="buttonGeography" mnemonicParsing="false" text="Geography" styleClass="cat-btn" onAction="#setGeography" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                <graphic>
+                    <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/geography.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="buttonGeneralKnow" mnemonicParsing="false" text="General Knowledge" styleClass="cat-btn" onAction="#setGeneralKnow" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                <graphic>
+                    <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/generalknow.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="buttonHistory" mnemonicParsing="false" text="History" styleClass="cat-btn" onAction="#setHistory" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                <graphic>
+                    <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/history.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="buttonMath" mnemonicParsing="false" text="Mathematics" styleClass="cat-btn" onAction="#setMath" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                <graphic>
+                    <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/math.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="buttonScience" mnemonicParsing="false" text="Science &amp; Nature" styleClass="cat-btn" onAction="#setScience" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                <graphic>
+                    <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/science.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </children>
+    </FlowPane>
+    <VBox maxHeight="38.0" maxWidth="38.0" StackPane.alignment="BOTTOM_RIGHT">
+        <padding>
+            <Insets right="7.0" bottom="7.0"/>
+        </padding>
+        <children>
+            <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" onMouseClicked="#adminMenu">
+                <image>
+                    <Image url="@../assets/key.png"/>
+                </image>
+            </ImageView>
+        </children>
+    </VBox>
+</children>
+</StackPane>

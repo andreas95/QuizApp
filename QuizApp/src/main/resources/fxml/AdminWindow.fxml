@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<StackPane fx:id="homeWindowSP" stylesheets="@../css/modern.css" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml" fx:controller="main.java.com.andreas.quizapp.controllers.AdminController">
+    <children>
+        <StackPane fx:id="headerSP" maxHeight="60.0" StackPane.alignment="TOP_CENTER" style="-fx-background-color: #2D4159;">
+            <children>
+                <Label fx:id="headerText" text="Admin panel" style="-fx-text-fill: white;" StackPane.alignment="CENTER" graphicTextGap="7.0">
+                    <graphic>
+                        <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/login.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Label>
+                <Button fx:id="buttonClose" mnemonicParsing="false" styleClass="close-btn" onAction="#closeScreen" prefWidth="22.0" prefHeight="22.0" StackPane.alignment="CENTER_RIGHT">
+                    <StackPane.margin>
+                        <Insets right="15.0"/>
+                    </StackPane.margin>
+                    <graphic>
+                        <ImageView fitWidth="20.0" fitHeight="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/close.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </StackPane>
+        <FlowPane fx:id="optionsPane" alignment="TOP_CENTER" maxWidth="1000.0" vgap="20" hgap="30">
+            <StackPane.margin>
+                <Insets top="180.0"/>
+            </StackPane.margin>
+            <children>
+                <Button fx:id="buttonAdd" mnemonicParsing="false" text="Add question" styleClass="cat-btn" onAction="#addPane" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                    <graphic>
+                        <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/add.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="buttonEdit" mnemonicParsing="false" text="Edit question" styleClass="cat-btn" onAction="#editPane" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                    <graphic>
+                        <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/edit.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="buttonDelete" mnemonicParsing="false" text="Delete question" styleClass="cat-btn" onAction="#deletePane" prefWidth="265.0" prefHeight="50.0" alignment="CENTER_LEFT" graphicTextGap="10.0">
+                    <graphic>
+                        <ImageView fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/delete.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </FlowPane>
+        <VBox fx:id="addMenu" alignment="TOP_CENTER" spacing="15.0">
+            <StackPane.margin>
+                <Insets top="120.0"/>
+            </StackPane.margin>
+            <children>
+                <Label text="Add a new question" textAlignment="LEFT" wrapText="true" styleClass="admin-title-text"/>
+                <GridPane vgap="10.0" hgap="8.0" alignment="TOP_CENTER">
+                    <padding>
+                        <Insets top="25.0" left="7.0" right="7.0"/>
+                    </padding>
+                    <children>
+                        <Label text="Category:" minWidth="110.0" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <ComboBox fx:id="ComboCategory" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                        <Label text="Question text:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <TextArea fx:id="FieldQnText" prefWidth="800.0" prefHeight="90" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label text="Response A:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                        <TextField fx:id="FieldRespA" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <Label text="Response B:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                        <TextField fx:id="FieldRespB" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Label text="Response C:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                        <TextField fx:id="FieldRespC" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <Label text="Response D:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                        <TextField fx:id="FieldRespD" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                        <Label text="Answer" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                        <ComboBox fx:id="ComboAnswer" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                        <HBox spacing="10.0" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                            <children>
+                                <Button fx:id="ButtonCancel" mnemonicParsing="false" onAction="#cancel" styleClass="btn-admin" text="Cancel">
+                                    <graphic>
+                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/x.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="ButtonSave" mnemonicParsing="false" onAction="#save" styleClass="btn-admin" text="Save">
+                                    <graphic>
+                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/go.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                            <GridPane.margin>
+                                <Insets top="10.0" />
+                            </GridPane.margin>
+                        </HBox>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+        <VBox fx:id="editMenu" alignment="TOP_CENTER" spacing="15.0">
+            <StackPane.margin>
+                <Insets top="120.0"/>
+            </StackPane.margin>
+            <children>
+                <Label text="Edit a question" textAlignment="LEFT" wrapText="true" styleClass="admin-title-text"/>
+                <GridPane vgap="10.0" hgap="8.0" alignment="TOP_CENTER">
+                    <padding>
+                        <Insets top="25.0" left="7.0" right="7.0"/>
+                    </padding>
+                    <children>
+                        <Label text="Category:" minWidth="110.0" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <ComboBox fx:id="ComboCategoryEdit" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                        <Label text="Question:" minWidth="110.0" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <ComboBox fx:id="ComboQuestionsEdit" prefWidth="800.0" maxWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label text="Category:" minWidth="110.0" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                        <ComboBox fx:id="ComboCatEdit" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <Label text="Question text:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                        <TextArea fx:id="FieldQnTextEdit" prefWidth="800.0" prefHeight="90" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Label text="Response A:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                        <TextField fx:id="FieldRespAEdit" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <Label text="Response B:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                        <TextField fx:id="FieldRespBEdit" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                        <Label text="Response C:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                        <TextField fx:id="FieldRespCEdit" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                        <Label text="Response D:" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+                        <TextField fx:id="FieldRespDEdit" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                        <Label text="Answer" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+                        <ComboBox fx:id="ComboAnswerEdit" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+                        <HBox spacing="10.0" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                            <children>
+                                <Button fx:id="ButtonCanceEdit" mnemonicParsing="false" onAction="#cancel" styleClass="btn-admin" text="Cancel">
+                                    <graphic>
+                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/x.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="ButtonEdit" mnemonicParsing="false" onAction="#edit" styleClass="btn-admin" text="Edit">
+                                    <graphic>
+                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/update.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                            <GridPane.margin>
+                                <Insets top="10.0" />
+                            </GridPane.margin>
+                        </HBox>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+        <VBox fx:id="deleteMenu" alignment="TOP_CENTER" spacing="15.0">
+            <StackPane.margin>
+                <Insets top="120.0"/>
+            </StackPane.margin>
+            <children>
+                <Label text="Delete a question" textAlignment="LEFT" wrapText="true" styleClass="admin-title-text"/>
+                <GridPane vgap="10.0" hgap="8.0" alignment="TOP_CENTER">
+                <padding>
+                    <Insets top="25.0" left="7.0" right="7.0"/>
+                </padding>
+                <children>
+                    <Label text="Category:" minWidth="110.0" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <ComboBox fx:id="ComboCategoryDel" prefWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="Question:" minWidth="110.0" textAlignment="LEFT" wrapText="false" styleClass="admin-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <ComboBox fx:id="ComboQuestions" prefWidth="800.0" maxWidth="800.0" prefHeight="34" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <HBox spacing="10.0" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <children>
+                            <Button fx:id="ButtonCancelDel" mnemonicParsing="false" onAction="#cancel" styleClass="btn-admin" text="Cancel">
+                                <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../assets/x.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Button fx:id="ButtonDelete" mnemonicParsing="false" onAction="#delete" styleClass="btn-admin" text="Delete">
+                                <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../assets/check.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                        </children>
+                        <GridPane.margin>
+                            <Insets top="10.0" />
+                        </GridPane.margin>
+                    </HBox>
+                </children>
+                </GridPane>
+            </children>
+        </VBox>
+
+    </children>
+</StackPane>

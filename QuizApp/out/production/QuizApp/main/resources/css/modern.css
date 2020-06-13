@@ -1,0 +1,125 @@
+.root {
+    -fx-background-color: #242A40;
+    -fx-color: #CCDAE7;
+    -fx-font-family: tahoma, arial, helvetica, sans-serif;
+    -fx-font-size: 14pt;
+}
+
+.cat-btn {
+    -fx-background-color: #32445C;
+    -fx-text-fill: white;
+    -fx-background-radius: 7px;
+    -fx-cursor: hand;
+}
+
+.cat-btn:hover {
+    -fx-background-color: #283345;
+    -fx-text-fill: #eee;
+}
+
+.close-btn {
+    -fx-background-color: none;
+    -fx-cursor: hand;
+}
+
+.close-btn:hover {
+    -fx-background-color: #283345;
+}
+
+.question-number {
+    -fx-fill: #8F98C1;
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+}
+
+.question-number-min {
+    -fx-fill: #8F98C1;
+    -fx-font-size: 14pt;
+}
+
+.question-text {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+}
+
+.admin-title-text {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+
+.admin-label {
+    -fx-text-fill: #eaebec;
+    -fx-font-size: 11pt;
+    -fx-font-weight: bold;
+}
+
+.btn-admin {
+    -fx-background-color:white;
+    -fx-text-fill:#565656 ;
+    -fx-font-weight: bold;
+    -fx-padding:5px;
+    -fx-background-radius: 5px;
+}
+
+.btn-admin:hover {
+    -fx-text-fill:  #dd4b39;
+    -fx-cursor: hand;
+}
+
+.combo-box-popup > .list-view {
+    -fx-pref-width: 800;
+    -fx-max-width: 800;
+}
+
+.response-button {
+    -fx-background-color: #CBDCE6;
+    -fx-background-radius: 30px;
+    -fx-text-fill: #58656E;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.response-button:selected {
+    -fx-background-color: #E88331;
+    -fx-text-fill: white;
+}
+
+.response-button:hover * .label {
+    -fx-text-fill: #383a3c;
+}
+
+.response-circle-text {
+    -fx-fill: white;
+    -fx-font-size: 17pt;
+    -fx-font-weight: bold;
+}
+
+.response-button:selected * .response-circle-text {
+    -fx-fill: #E88331;
+}
+
+.response-circleX {
+    -fx-fill: #CBDCE6;
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+}
+
+.response-button:selected * .response-circleX {
+    -fx-fill: #E88331;
+}
+
+.next-button {
+    -fx-background-color: #E6812F;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.next-button:hover {
+    -fx-background-color: #df5200;
+    -fx-text-fill: #ffdaa9;
+}
